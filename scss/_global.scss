@@ -1,0 +1,94 @@
+$lightblue1: #eff7f9;
+$lightblue2: #fbfdfe;
+$lightblue3: #b0c6ff;
+$blue: #0a45c2;
+$black: #000000;
+$white: #ffffff;
+$grey: #b6b6b6;
+$red: red;
+$orange: orange;
+$green: green;
+$md: 1024px;
+$lg: 1230px;
+
+.poppins {
+  font-family: "Poppins", sans-serif !important;
+  letter-spacing: 0.08em;
+}
+
+@mixin desktop {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin xdesktop {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.lw {
+  > .cw {
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 100%;
+
+    @include xdesktop {
+      max-width: $lg;
+      margin: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+  letter-spacing: 0.08em;
+}
+
+* {
+  outline: none !important;
+}
+
+main {
+  background: url(/../img/bg.svg) no-repeat center;
+  background-size: cover;
+}

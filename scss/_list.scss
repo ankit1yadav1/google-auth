@@ -1,0 +1,120 @@
+.listpg {
+  main {
+    background-color: $lightblue2;
+    .cw {
+      overflow: hidden;
+      height: calc(100vh - 78px);
+    }
+    h1 {
+      color: $blue;
+      font-size: 26px;
+      line-height: 39px;
+      padding: 32px 0 16px 0;
+      span {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .title {
+      padding: 10px 40px 0 56px;
+      display: none;
+      @include desktop {
+        display: flex;
+      }
+      p {
+        width: 33.333%;
+        font-size: 12px;
+        line-height: 18px;
+        color: $lightblue3;
+        text-transform: uppercase;
+      }
+    }
+    .list {
+      padding: 0 10px;
+      height: calc(100vh - 78px - 38px - 80px);
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f4f7ff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $blue;
+        border-radius: 4px;
+      }
+      .datawpr {
+        background: $white;
+        padding: 10px 20px 10px 46px;
+        box-shadow: 0px 2px 6px rgba(5, 62, 209, 0.14);
+        border-radius: 8px;
+        margin: 10px 0;
+        border: 1px solid transparent;
+        transition: border 0.3s ease-in-out, transform 0.2s ease-in-out;
+        transform: scale(1);
+        flex-flow: column wrap;
+        align-items: flex-start;
+        @include desktop {
+          flex-flow: row nowrap;
+          align-items: center;
+        }
+        &:hover {
+          transform: scale(1.01);
+          border: 1px solid #4eb4ff;
+        }
+        * {
+          cursor: pointer;
+        }
+        > div,
+        > p {
+          width: 100%;
+          @include desktop {
+            width: 33.333%;
+          }
+        }
+        .namewpr {
+          img {
+            margin: 0 10px 0 0;
+            width: 40px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+        .email {
+          font-size: 12px;
+          line-height: 18px;
+          padding: 10px 0;
+          @include desktop {
+            padding: 0;
+          }
+        }
+        .lastcolwpr {
+          .svgwpr {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            @include desktop {
+              position: static;
+            }
+            button {
+              border: 0;
+              border-radius: 0;
+              background: none;
+            }
+          }
+          p {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+        input {
+          margin: 0 15px 0 -30px;
+        }
+      }
+    }
+  }
+}

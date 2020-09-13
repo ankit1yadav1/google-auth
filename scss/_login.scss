@@ -1,0 +1,56 @@
+.loginpg {
+  main {
+    background-color: $lightblue1;
+    width: 100vw;
+    height: 100vh;
+    .cw {
+      padding: 0 25px;
+      @include desktop {
+        padding: 0;
+      }
+    }
+    .wpr {
+      max-width: 483px;
+      min-height: 280px;
+      background-color: $white;
+      border-radius: 10px;
+      .logo {
+        margin: 40px 0 48px 0;
+        img {
+          width: 30px;
+          margin-bottom: 12px;
+        }
+        h1 {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.08em;
+        }
+      }
+    }
+    .lgnfrm {
+      margin: 40px;
+      input {
+        background: $white;
+        border: 1px solid $blue;
+        border-radius: 4px;
+        padding: 18px 20px;
+        margin: 0 0 24px 0;
+        font-size: 18px;
+        line-height: 25px;
+        &::placeholder {
+          color: $grey;
+        }
+      }
+      .btn {
+        background: $blue;
+        border-radius: 4px;
+        padding: 18px 20px;
+        margin: 0 0 20px 0;
+        border: 0;
+        color: $white;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}

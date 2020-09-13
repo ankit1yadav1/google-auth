@@ -1,0 +1,104 @@
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.inlineblock {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.rownowrap {
+  flex-flow: row nowrap;
+}
+
+.rowwrap {
+  flex-flow: row wrap;
+}
+
+.colnowrap {
+  flex-flow: column nwrap;
+}
+
+.colwrap {
+  flex-flow: column wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.boxshadow {
+  box-shadow: 0px 4px 10px rgba(5, 62, 209, 0.19);
+}
+
+.text-normal {
+  font-weight: 400;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-center {
+  text-align: center;
+}
+.wfull {
+  width: 100%;
+}
+.justifycenter {
+  justify-content: center;
+}
+.aligncenter {
+  align-items: center;
+}
+.justifybetween {
+  justify-content: space-between;
+}
+.hscreen {
+  height: 100vh;
+}
+.mauto {
+  margin: auto;
+}
+.border-red {
+  border: 1px solid $red;
+}
+.border-orange {
+  border: 1px solid $orange;
+}
+.border-blue {
+  border: 1px solid $blue;
+}
+.border-black {
+  border: 1px solid $black;
+}
+.border-green {
+  border: 1px solid $green;
+}
+.rounded {
+  border-radius: 100%;
+}
