@@ -26,7 +26,7 @@ function UserList() {
       });
   }, []);
 
-  function onDelete(id) {
+  const onDelete = (id) => {
     axios({
       method: "post",
       url: "https://google-users-auth-api.herokuapp.com/auth/delete-user",

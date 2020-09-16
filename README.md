@@ -19,7 +19,7 @@ You will also see any lint errors in the console.
 
 we have two pages created under the src/pages one for login and other for listing
 
-### `components`
+### `Components`
 we have used the React Hooks to maintains the states in 
 List Component - Used for listing the users
 Login Component - Used for showing the login screen
@@ -33,5 +33,5 @@ Header Component - Used for header in listing page
   This component is used to list the users, the information is pulled form an api for the users also only if the user is Authenticated that the list page is shown to user, otherwise it routes back to login page.
   Also only Auhtorized user can delete his own data and no other can delete someone else's data. And click on dlete also triggers the api call to delete the data from the database.
 
-### `Header Compoent`
+### `Header Component`
   This component fetches the data from the local storage and displays loggedIn user info, also there is logout button, which clears all the storage and drives back the user to Login page.

@@ -8,20 +8,20 @@ const Header = ({ data, onLogout }) => {
           <div className="leftwpr flex aligncenter">
             <div className="imgwpr rounded">
               <img
-                src={data.imageUrl}
+                src={data.imageUrl && data.imageUrl}
                 alt="profile image"
                 className="rounded"
               />
             </div>
             <div className="contentwpr">
-              <p className="name">{data.name}</p>
-              <p className="email">{data.email}</p>
+              <p className="name" id="name">{data.name && data.name}</p>
+              <p className="email" id="email">{data.email && data.email}</p>
             </div>
           </div>
           <div className="rightwpr">
-            <button onClick={onLogout}>
+            {onLogout && <button onClick={onLogout} id="logout">
               <img src="../img/logout.svg" alt="logout" />
-            </button>
+            </button>}
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ function Login(){
   const [ userInfo, setUserInfo ] = useState(false)
   const [ failedUserInfo, setfailedUserInfo ] = useState(false)
 
-  function responseGoogleSuccess(response){
+  const responseGoogleSuccess = (response) =>{
     let user = {
       name : response.profileObj.name,
       email : response.profileObj.email,
@@ -17,21 +17,26 @@ function Login(){
     sessionStorage.setItem("gId", response.profileObj.googleId)
     axios.post('https://google-users-auth-api.herokuapp.com/auth/users', user)
     .then((response)=>{
-      setUserInfo(true)
       localStorage.setItem("user",JSON.stringify(response))
+      setUserInfo(true)
     })
     .catch((error)=>{
       console.log(error)
     })
   }
 
-  function responseGooglefailed(response){
+  const responseGooglefailed = () => {
     setfailedUserInfo(true)
+  }
+
+  const showFailBox = () => {
+    alert("Google Authentication Failed! Please try again")
   }
 
   return(
     <>
       {userInfo && <Redirect to='/users' /> }
+      {failedUserInfo && showFailBox() }
       <div className="lg">
         <div className="cw flex justifycenter aligncenter hscreen">
             <div className="wpr text-center wfull boxshadow">
@@ -43,7 +48,7 @@ function Login(){
                 <GoogleLogin
                   clientId="682740235501-va7f09rkt99fvu12invmf6snifagrpab.apps.googleusercontent.com"
                   render={renderProps => (
-                    <button className="btn text-bold wfull poppins" onClick={renderProps.onClick} disabled={renderProps.disabled}>Sign In</button>
+                    <button className="btn text-bold wfull poppins" id="LoginButton" onClick={renderProps.onClick} disabled={renderProps.disabled}>Sign In</button>
                   )}
                   buttonText="Login"
                   onSuccess={responseGoogleSuccess}
